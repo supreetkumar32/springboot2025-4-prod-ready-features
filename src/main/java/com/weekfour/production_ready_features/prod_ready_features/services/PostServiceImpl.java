@@ -2,6 +2,7 @@ package com.weekfour.production_ready_features.prod_ready_features.services;
 
 import com.weekfour.production_ready_features.prod_ready_features.dto.PostDTO;
 import com.weekfour.production_ready_features.prod_ready_features.entities.PostEntity;
+import com.weekfour.production_ready_features.prod_ready_features.exceptions.ResourceNotFoundException;
 import com.weekfour.production_ready_features.prod_ready_features.repositories.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -32,14 +33,14 @@ public class PostServiceImpl implements PostService{
         return modelMapper.map(postRepository.save(postEntity), PostDTO.class);
     }
 
-//    @Override
-//    public PostDTO getPostById(Long postId) {
-//        PostEntity postEntity = postRepository
-//                .findById(postId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Post not found with id "+postId));
-//        return modelMapper.map(postEntity, PostDTO.class);
-//    }
-//
+    @Override
+    public PostDTO getPostById(Long postId) {
+        PostEntity postEntity = postRepository
+                .findById(postId)
+                .orElseThrow(() -> new ResourceNotFoundException("Post not found with id "+postId));
+        return modelMapper.map(postEntity, PostDTO.class);
+    }
+
 //    @Override
 //    public PostDTO updatePost(PostDTO inputPost, Long postId) {
 //        PostEntity olderPost = postRepository.findById(postId).orElseThrow(() -> new ResourceNotFoundException("Post not found with id "+postId));

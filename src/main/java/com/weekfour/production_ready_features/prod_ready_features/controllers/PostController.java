@@ -15,16 +15,21 @@ public class PostController {
     private final PostService postService;
 
     @GetMapping
-    public List<PostDTO> getAllPosts() { //localhost:8080/posts
+    public List<PostDTO> getAllPosts() {
         return postService.getAllPosts();
     }
 
-//    @GetMapping("/{postId}")
-//    public PostDTO getPostById(@PathVariable Long postId) {
-//        return postService.getPostById(postId);
-//    }
-//
-    @PostMapping
+    @GetMapping("/{postId}")
+    public PostDTO getPostById(@PathVariable Long postId) {
+        return postService.getPostById(postId);
+    }
+
+     //localhost:8080/posts
+     //{
+//    "title":"This is the title 1",
+//            "description":"This is description 1"
+//}
+    @PostMapping //localhost:8080/posts/1
     public PostDTO createNewPost(@RequestBody PostDTO inputPost) {
         return postService.createNewPost(inputPost);
     }
