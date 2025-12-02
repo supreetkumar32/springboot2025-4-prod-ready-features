@@ -2,6 +2,7 @@ package com.weekfour.production_ready_features.prod_ready_features.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@Audited
 public class PostEntity extends AuditableEntity{
 
     @Id
@@ -23,6 +25,21 @@ public class PostEntity extends AuditableEntity{
     private Long id;
     private String title;
     private String description;
+
+    @PrePersist
+    void beforeSave(){
+
+    }
+
+    @PreUpdate
+    void beforeUpdate(){
+
+    }
+
+    @PreRemove
+    void beforeDelete(){
+
+    }
 
 
 }
