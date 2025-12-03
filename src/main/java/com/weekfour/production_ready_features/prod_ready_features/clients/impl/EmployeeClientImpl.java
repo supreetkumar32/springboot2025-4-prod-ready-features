@@ -1,14 +1,17 @@
 package com.weekfour.production_ready_features.prod_ready_features.clients.impl;
 
+import com.weekfour.production_ready_features.prod_ready_features.advice.ApiResponse;
 import com.weekfour.production_ready_features.prod_ready_features.clients.EmployeeClient;
 import com.weekfour.production_ready_features.prod_ready_features.dto.EmployeeDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
 public class EmployeeClientImpl implements EmployeeClient {
 
@@ -17,12 +20,12 @@ public class EmployeeClientImpl implements EmployeeClient {
     @Override
     public List<EmployeeDTO> getAllEmployees() {
         try {
-            List<EmployeeDTO> employeeDTOList = restClient.get()
+            ApiResponse<List<EmployeeDTO>> employeeDTOList = restClient.get()
                     .uri("employees")
                     .retrieve()
                     .body(new ParameterizedTypeReference<>() {
                     });
-            return employeeDTOList;
+            return employeeDTOList.getData();
         }catch(Exception e){
             throw new RuntimeException(e);
         }
