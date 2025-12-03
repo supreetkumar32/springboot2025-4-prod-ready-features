@@ -1,0 +1,39 @@
+2025-12-03T23:16:49.962+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] c.w.p.p.ProdReadyFeaturesApplication     : Starting ProdReadyFeaturesApplication using Java 25 with PID 22936 (C:\Users\supre\Desktop\weekfour\springboot2025-4-prod-ready-features\prod-ready-features\target\classes started by supre in C:\Users\supre\Desktop\weekfour\springboot2025-4-prod-ready-features\prod-ready-features)
+2025-12-03T23:16:49.964+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] c.w.p.p.ProdReadyFeaturesApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-03T23:16:50.177+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-03T23:16:50.194+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2025-12-03T23:16:50.385+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2025-12-03T23:16:50.387+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-03T23:16:50.388+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-03T23:16:50.426+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 457 ms
+2025-12-03T23:16:50.472+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-03T23:16:50.531+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-12-03T23:16:50.544+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-03T23:16:50.546+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Starting...
+2025-12-03T23:16:50.671+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-41 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4573d469
+2025-12-03T23:16:50.671+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Start completed.
+2025-12-03T23:16:50.676+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.4
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-03T23:16:50.700+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.weekfour.production_ready_features.prod_ready_features.entities.PostEntity
+2025-12-03T23:16:50.775+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-03T23:16:50.912+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-03T23:16:51.105+05:30  WARN 22936 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-03T23:16:51.481+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2025-12-03T23:16:51.494+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] c.w.p.p.ProdReadyFeaturesApplication     : Started ProdReadyFeaturesApplication in 1.705 seconds (process running for 5751.749)
+2025-12-03T23:16:51.512+05:30  INFO 22936 --- [prod-ready-features] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-03T23:16:53.812+05:30  INFO 22936 --- [prod-ready-features] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-03T23:16:53.821+05:30  INFO 22936 --- [prod-ready-features] [Thread-161] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-03T23:16:53.827+05:30  INFO 22936 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-12-03T23:16:53.839+05:30  INFO 22936 --- [prod-ready-features] [Thread-161] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-03T23:16:53.840+05:30  INFO 22936 --- [prod-ready-features] [Thread-161] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown initiated...
+2025-12-03T23:16:53.844+05:30  INFO 22936 --- [prod-ready-features] [Thread-161] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown completed.
